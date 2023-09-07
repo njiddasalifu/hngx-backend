@@ -3,17 +3,19 @@ const app = express();
 
 app.get('/salif/api', (req, res) => {
   const slackName = req.query.slack_name;
-  const currentDay = req.query.current_day;
-  const utcTime = new Date().toISOString();
   const track = req.query.track;
+  //defining the current day using the date format method 
+  const options = { weekday: 'long' };
+  const currentDay = new Date().toLocaleDateString('en-US', options);
+  const utcTime = new Date().toISOString();
   const githubFileUrl = req.query.github_file_url;
   const githubRepoUrl = req.query.github_repo_url;
 
   const response = {
     slack_name: "HNGx",
-    current_day: "Thursday",
-    utc_time: utcTime,
     track: "Backend",
+    current_day: currentDay,
+    utc_time: utcTime,
     github_file_url: "No file yet",
     github_repo_url: "https://github.com/njiddasalifu/hngx-backend",
     status_code: 200
