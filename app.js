@@ -4,10 +4,13 @@ const app = express();
 app.get('/salif/api', (req, res) => {
   const slackName = req.query.slack_name;
   const track = req.query.track;
-  //defining the current day using the date format method 
+  // Defining the current day using the date format method
   const options = { weekday: 'long' };
   const currentDay = new Date().toLocaleDateString('en-US', options);
+  
+  // Getting the current UTC time in the desired format
   const utcTime = new Date().toISOString();
+
   const githubFileUrl = req.query.github_file_url;
   const githubRepoUrl = req.query.github_repo_url;
 
