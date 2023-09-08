@@ -16,7 +16,7 @@ app.get('/salif/api', (req, res) => {
     track: "Backend",
     current_day: currentDay,
     utc_time: utcTime,
-    github_file_url: "No file yet",
+    github_file_url: "https://github.com/njiddasalifu/hngx-backend/blob/main/app.js",
     github_repo_url: "https://github.com/njiddasalifu/hngx-backend",
     status_code: 200
   };
