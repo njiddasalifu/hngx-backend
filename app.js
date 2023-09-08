@@ -13,7 +13,7 @@ app.get('/salif/api', (req, res) => {
 
   const response = {
     slack_name: "HNGx",
-    track: "Backend",
+    track: "backend",
     current_day: currentDay,
     utc_time: utcTime,
     github_file_url: "https://github.com/njiddasalifu/hngx-backend/blob/main/app.js",
